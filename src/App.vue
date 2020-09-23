@@ -6,7 +6,7 @@
         v-bind:timer="timer"
         :key="timer.id"
       />
-      <div class='add-timer'>&plus;</div>
+      <div class="add-timer">&plus;</div>
     </div>
   </div>
 </template>
@@ -15,7 +15,7 @@
 import Timer from './components/Timer.vue'
 
 const timers = [
-  { id: 0, hours: 0, minutes: 0, seconds: 0, active: false },
+  { id: 0, hours: 0, minutes: 0, seconds: 0, active: true },
   { id: 1, hours: 0, minutes: 0, seconds: 0, active: false },
   { id: 2, hours: 0, minutes: 0, seconds: 0, active: false },
 ];
