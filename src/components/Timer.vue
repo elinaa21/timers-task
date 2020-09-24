@@ -32,7 +32,7 @@ export default {
   width: 225px;
   height: 120px;
   background-color: #696969;
-  margin-bottom: 50px;
+  margin: 0 25px 50px 25px;
 }
 .timer__time {
   font-size: 22px;
