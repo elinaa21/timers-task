@@ -3,8 +3,8 @@
     <div 
       class="timer__time"
       v-bind:class="{timer__time_active: timer.active}"
-    >{{timer.hours ? `${timer.hours}:${timer.minutes}:${timer.seconds}` :
-      timer.minutes ? `${timer.minutes}:${timer.seconds}` :
+    >{{timer.hours ? `${timer.hours}:${add0(timer.minutes)}:${add0(timer.seconds)}` :
+      timer.minutes ? `${timer.minutes}:${add0(timer.seconds)}` :
       `${timer.seconds}` 
     }}</div>
     <div class="options">
@@ -64,6 +64,9 @@ export default {
       this.timer.seconds = 0;
       this.timer.minutes = 0;
       this.timer.hours = 0;
+    },
+    add0(number) {
+      return number < 10 ? '0' + number : number;
     }
   },
   data() {
