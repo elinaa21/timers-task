@@ -3,9 +3,16 @@
     <div 
       class="timer__time"
       v-bind:class="{timer__time_active: timer.active}"
-    >{{timer.hours}}:{{timer.minutes}}:{{timer.seconds}}</div>
+    >{{timer.hours ? `${timer.hours}:${timer.minutes}:${timer.seconds}` :
+      timer.minutes ? `${timer.minutes}:${timer.seconds}` :
+      `${timer.seconds}` 
+    }}</div>
     <div class="options">
-      <div class="play" v-if="!timer.active" @click="timer.active = !timer.active"></div>
+      <div 
+        class="play" 
+        v-if="!timer.active" 
+        @click="playTimer"
+      ></div>
       <div class="pause" v-else @click="timer.active = !timer.active"></div>
       <div 
         class="stop"
@@ -22,6 +29,16 @@ export default {
     timer: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    playTimer() {
+      this.timer.active = !this.timer.active
+    }
+  },
+  data() {
+    return {
+      intervalIDs: {}
     }
   }
 }

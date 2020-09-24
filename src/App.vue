@@ -15,7 +15,7 @@
 import Timer from './components/Timer.vue'
 
 const timers = [
-  { id: 0, hours: 0, minutes: 0, seconds: 0, active: true },
+  { id: 0, hours: 0, minutes: 0, seconds: 0, active: false },
   { id: 1, hours: 0, minutes: 0, seconds: 0, active: false },
   { id: 2, hours: 0, minutes: 0, seconds: 0, active: false },
 ];
@@ -99,9 +99,11 @@ export default {
 .container {
   margin: 0 auto;
   width: 60%;
-  height: max-content;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 
