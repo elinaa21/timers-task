@@ -34,6 +34,38 @@ export default {
 </script>
 
 <style>
+@media (max-width: 1300px) {
+  .container {
+    width: 70% !important;
+  }
+}
+@media (max-width: 1065px) {
+  .container {
+    width: 75% !important;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 55% !important;
+  }
+}
+@media (max-width: 880px) {
+  .container {
+    width: 62% !important;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 50% !important;
+    justify-content: center !important;
+  }
+}
+@media (max-width: 453px) {
+  .container {
+    width: 99% !important;
+    justify-content: center !important;
+  }
+}
 .app {
   background-color: #353638;
   position: absolute;
