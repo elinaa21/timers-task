@@ -5,8 +5,8 @@
       v-bind:class="{timer__time_active: timer.active}"
     >{{timer.hours}}:{{timer.minutes}}:{{timer.seconds}}</div>
     <div class="options">
-      <div class="left-img play" v-if="!timer.active"></div>
-      <div class="left-img pause" v-else></div>
+      <div class="play" v-if="!timer.active" @click="timer.active = !timer.active"></div>
+      <div class="pause" v-else @click="timer.active = !timer.active"></div>
       <div 
         class="stop"
         v-bind:class="{stop_active: timer.active}"
@@ -56,9 +56,6 @@ export default {
   justify-content: center;
   height: 50%;
 }
-.left-img {
-  margin-right: 48px;
-}
 .play {
   width: 20px;
   height: 20px;
@@ -67,6 +64,7 @@ export default {
   box-sizing: border-box;
   border-color: transparent transparent transparent #9E9E9E;
   cursor: pointer;
+  margin-right: 48px;
 }
 .stop {
   width: 20px;
@@ -84,5 +82,6 @@ export default {
   border-style: double;
   border-width: 0px 0px 0px 10px;
   border-color: #ffffff;
+  margin-right: 39px;
 }
 </style>
