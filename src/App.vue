@@ -67,4 +67,8 @@ export default {
   align-items: center;
   justify-content: center;
 }
+.add-timer:hover {
+  color: white;
+  cursor: pointer;
+}
 </style>
